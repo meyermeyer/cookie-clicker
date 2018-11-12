@@ -1,25 +1,45 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+const getCookie = (cookieName) => {
+  // Get name followed by anything except a semicolon
+  const cookieString = RegExp(''+cookieName+'[^;]+').exec(document.cookie);
+  // Return everything after the equal sign, or an empty string if the cookie name not found
+  return decodeURIComponent(!!cookieString ? cookieString.toString().replace(/^[^=]+./,'') : '');
+}
 
 class App extends Component {
+  state = {
+    clickCount: getCookie('count') || 0,
+  }
+
+  handleClick = () => {
+    const newCount = Number(this.state.clickCount) + 1;
+    document.cookie = `count=${newCount}`;
+    this.setState({
+      clickCount: newCount,
+    });
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+      <div>
+        <center>
+          <h1>Click the Cookie!!</h1>
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            Username:
+            {/* Username should go here */}
+            <button>Edit Username</button>
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
+          <p>{this.state.clickCount}</p>
+          <span
+            role="img"
+            aria-label="cookie"
+            style={{fontSize: '100px', cursor: 'pointer'}}
+            onClick={this.handleClick}
           >
-            Learn React
-          </a>
-        </header>
+            🍪
+          </span>
+        </center>
       </div>
     );
   }
