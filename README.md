@@ -4,6 +4,8 @@ We're developing a hot new game called "Cookie Clicker" that is going to blow up
 
 The game functionality is all set! It counts the number of times the user clicks the cookie image in the middle of the screen. In our first round of user testing, we discovered that when a user refreshes the page, they didn't like that they had to start all over. We have now implemented cookies so they keep their score!
 
+If you'd like a little more context on cookies before diving in, the [w3schools intro](https://www.w3schools.com/js/js_cookies.asp) is a good place to start.
+
 ## Base
 
 In the second round of user testing, we found that users like to see their name on the screen.
