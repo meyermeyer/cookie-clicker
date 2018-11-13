@@ -6,6 +6,8 @@ The game functionality is all set! It counts the number of times the user clicks
 
 If you'd like a little more context on cookies before diving in, the [w3schools intro](https://www.w3schools.com/js/js_cookies.asp) is a good place to start.
 
+If you'd like to look at pictures of cookies before you start, [unsplash](https://unsplash.com) is a great place for free stock images, and it has [pictures of cookies](https://unsplash.com/search/photos/cookies).
+
 ## Base
 
 In the second round of user testing, we found that users like to see their name on the screen.
@@ -18,3 +20,4 @@ In the second round of user testing, we found that users like to see their name 
 ## Stretch
 
 - [ ] Allow the user to log out by removing the cookie.
+- [ ] Every time a user clicks the cookie, change the background of the site to a random image of a cookie. The [unsplash api documentation](https://unsplash.com/documentation) will be helpful here.
