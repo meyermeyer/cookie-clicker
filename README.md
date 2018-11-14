@@ -10,6 +10,8 @@ If you'd like to look at pictures of cookies before you start, [unsplash](https:
 
 ## Base
 
+Start this project with `npm start`
+
 In the second round of user testing, we found that users like to see their name on the screen.
 
 - [ ] The username should display on the screen.
