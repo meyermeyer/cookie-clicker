@@ -44,6 +44,23 @@ class App extends Component {
             {/* The next block of code is conditional rendering.
             Look at the documentation https://reactjs.org/docs/conditional-rendering.html
             if this is new to you. */}
+            {/* 
+              This conditional rendering is using a `ternary` operator. It works like an if/else block.
+              The part at the front is being evaluated. The `?` starts the conditions. 
+              The first condition is what will be done if true.
+              The `:` breaks into the else block.
+              
+              Rewritten as if/else:
+              ```
+              let buttonToShow;
+              if(this.state.usernameIsEditable) {
+                buttonToShow = <button onClick={this.saveUsername}>Save Username</button>
+              } else {
+                buttonToShow = <button onClick={this.editUsername}>Edit Username</button>
+              }
+              ```
+
+            */}
             {this.state.usernameIsEditable ?
               <button onClick={this.saveUsername}>Save Username</button> :
               <button onClick={this.editUsername}>Edit Username</button>
