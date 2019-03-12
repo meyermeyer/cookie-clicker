@@ -19,7 +19,11 @@ In the second round of user testing, we found that users like to see their name 
 - [ ] When the user selects the save button, it should turn back into an `Edit Username` button, and the input should turn back into a display of the new name.
 - [ ] When the user refreshes the page, they should continue to see their name.
 
-To see all of the cookies for your application. Open the dev tools, then click `Application`. Scroll down to `Storage`, and cookies should be one of the options you can view.
+To see all of the cookies for your application. Open the dev tools, then click `Application`. Scroll down to `Storage`, and `Cookies` should be one of the options you can view.
+
+Clear your cookies before starting this assignment by clicking the 🚫symbol in the cookies page dev tool. Doing this regularly will avoid potential cookie conflicts between sites you are developing.
+
+![Cookies Dev Tool](/images/cookies-dev-tool.png)
 
 ## Stretch
 
