@@ -39,10 +39,10 @@ class App extends Component {
 
   handleLogout = ()=> {
     document.cookie = `username=`
-    this.setState({
-      ...this.state,
-      username: ""
-    })
+    // this.setState({
+    //   ...this.state,
+    //   username: ""
+    // })
   }
 
   saveUsername = (event) => {
