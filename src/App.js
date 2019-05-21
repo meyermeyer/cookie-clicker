@@ -11,7 +11,7 @@ class App extends Component {
   state = {
     clickCount: getCookie('count') || 0,
     usernameIsEditable: false,
-    username: getCookie('username')
+    username: getCookie('username') || ""
   }
 
   handleClick = () => {
@@ -34,6 +34,14 @@ class App extends Component {
     this.setState({
       ...this.state,
       username: event.target.value
+    })
+  }
+
+  handleLogout = ()=> {
+    document.cookie = `username=`
+    this.setState({
+      ...this.state,
+      username: ""
     })
   }
 
@@ -82,8 +90,9 @@ class App extends Component {
               </>
               :
               <>  
-                <span>{this.state.username}</span>
+                <span>  {this.state.username}  </span>
                 <button onClick={this.editUsername}>Edit Username</button>
+                <button onClick={this.handleLogout}>Log Out</button>
               </>
               
             }
